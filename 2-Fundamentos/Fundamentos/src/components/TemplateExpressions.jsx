@@ -17,7 +17,8 @@ export const TemplateExpressions = () => {
     <p>Profissão: {data.job}</p>
     <p>{8+8}</p>
     <p>{console.log('Olá, Mundo!')}</p>
+    
 
     </>
   )
-}
+};

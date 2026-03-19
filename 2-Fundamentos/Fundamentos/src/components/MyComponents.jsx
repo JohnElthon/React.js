@@ -10,4 +10,4 @@ const MyComponents = () => {
   )
 }
     
-export default MyComponents
+export default MyComponents;

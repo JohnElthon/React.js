@@ -182,29 +182,3 @@
     border-right-color: var(--border);
   }
 }
-.Titulo{
-  
-  color: aqua;
-}
-.Titulo2{
-  color:blueviolet;
-
-}
-.Paragrafo{
-  font-size: 25px;
-  color:dodgerblue
-}
-.Mycomponents{
-  color: chocolate;
-}
-.ParagrafoMy{
-  font-size: 25px;
-  color: forestgreen;
-}
-img{
-  width: 300px;
-  height: 300px;
-
-}
-
-

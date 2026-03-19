@@ -1,4 +1,3 @@
-import React from 'react'
 import MyComponents from './MyComponents'
 
 const FirstComponents = () => {
@@ -26,4 +25,4 @@ const FirstComponents = () => {
   )
 }
     
-export default FirstComponents
+export default FirstComponents;
