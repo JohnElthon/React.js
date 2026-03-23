@@ -1,23 +1,26 @@
 import { useState } from "react"
 
 const ManageData2UseState = () => {
-    let nome = "Marcos";
+    let nome = "John";
 
-    const [name, setName] = useState("Lucas");
+    const [name, setName] = useState("Yan");
 
   return (
     <div>
         <h2>Gerenciando Dados com useState: ManageData2</h2>
-        <button onClick={() => (nome = "Maria")}>Forma Errada</button>
-        <p>Nome: {nome}</p>
+        <button className="Botao" onClick={() => (nome = "Debora")}>Forma Errada</button>
 
-        {/* <p>Antes Nome: {name}</p> */}
-        <button onClick={() => setName("Maria")}>Forma Correta!</button>
-        <p>Depois Nome: {name}</p>
+        <p className="Titulo">Antes Nome: {nome}</p>
+        <p className="Titulo">Depois Nome: {name}</p>
+
+        <button className="Botao" onClick={() => setName("Debora")}>Forma Correta</button>
+        
+        <p className="Titulo">Nome: {name}</p>
+
     </div>
 
     
   )
 }
 
-export default ManageData2UseState
+export default ManageData2UseState;

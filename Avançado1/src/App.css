@@ -182,3 +182,19 @@
     border-right-color: var(--border);
   }
 }
+.Botao{
+  border-width: 4px;
+  padding: 9px;
+  color:black;
+  background-color: azure;
+  border-color:blueviolet;
+  font-weight: bold;
+  
+}
+.Titulo{
+  font-weight: bold;
+  color:cornflowerblue;
+  text-decoration:underline;
+  
+
+}
