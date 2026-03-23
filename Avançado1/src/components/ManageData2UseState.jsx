@@ -11,11 +11,14 @@ const ManageData2UseState = () => {
         <button className="Botao" onClick={() => (nome = "Debora")}>Forma Errada</button>
 
         <p className="Titulo">Antes Nome: {nome}</p>
+        <hr />
         <p className="Titulo">Depois Nome: {name}</p>
 
         <button className="Botao" onClick={() => setName("Debora")}>Forma Correta</button>
         
         <p className="Titulo">Nome: {name}</p>
+
+        <button className="Botao" onClick={() => setName("Yan")}>Voltar ao Normal</button>
 
     </div>
 
