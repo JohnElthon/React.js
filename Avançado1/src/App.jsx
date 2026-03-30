@@ -4,9 +4,11 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import ManageData2UseState from './components/ManageData2UseState'
+import ListRender from './components/ListRender'
+import CondicionalRender from './components/CondicionalRender'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
@@ -17,7 +19,10 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-         <ManageData2UseState/>
+         <ManageData2UseState/> 
+         <hr />
+         <ListRender/>
+         <CondicionalRender/>
         </div>
       </section>
 
