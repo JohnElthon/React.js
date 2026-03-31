@@ -1,8 +1,10 @@
-import React from 'react'
 
-const ShowUserName = () => {
+const ShowUserName = (props) => {
   return (
-    <div>ShowUserName</div>
+    <div>
+      <h2>Usando Props: ShowUserName</h2>
+      <p>O nome do usuário é: {props.name}</p>
+    </div>
   )
 }
 
