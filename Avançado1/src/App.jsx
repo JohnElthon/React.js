@@ -12,6 +12,23 @@ import CarDetails from './components/CarDetails'
 import Container from './components/container'
 import ExecuteFunction from './components/ExecuteFunction'
 import Message from './components/Message'
+import ChangeMessageState from './components/ChangeMessageState'
+
+
+//Ordem de aprendizagem:
+//1 - Imagem em Public - Arquivo App.jsx
+//2 - Imagem em Assets - Arquivo App.jsx
+//3 - useState: Gerenciamento de estado - Arquivo ManageData.jsx e ManageData2UseState.jsx
+//4 - Renderização de listas e objetos - Arquivo ListRender.jsx
+//5 - Renderização condicional - Arquivo CondicionalRender.jsx
+//6 - Props - Arquivo ShowUserName.jsx
+//7 - Destructuring Props - Arquivo CarDetails.jsx
+//8 - Reaproveitando Componente - Arquivo CarDetails.jsx
+//9 - Loop em array de objetos - Arquivo App.jsx (Array de objetos utilizado em CarDetails.jsx)
+//10 - Fragment - Arquivo Fragment2.jsx
+//11 - Children - Arquivo Container.jsx
+//12 - Executar função por Props(Pelo componente Filho) - Arquivo ExecuteFunction.jsx
+//13 - State Lift: Um componente exibe outro altera, o Pai gerencia; - Arquivo App.jsx (Componente Message.jsx e ChangeMessageState.jsx)
 
 
 function App() {
@@ -87,6 +104,7 @@ function App() {
 
          {/* Children: Conseguimos renderizar conteúde Html pelo componente filho*/}
       <Container propValor = "John Elthon">
+        <h3>Children</h3>
         <p>Conteúdo filho do Container</p>
       </Container>
       <hr />
@@ -96,7 +114,9 @@ function App() {
       <hr />
 
       {/* State Lift: Um componente exibe outro altera, o Pai gerencia*/}
-      <Message/>
+      <Message msg={message}/> {/* Componente que existe o valor do estado message*/}
+      <ChangeMessageState ChangeMessage={handleMessage}/> {/* Componente que altera o valor do estado*/}
+      
 
         </div>
       </section>
