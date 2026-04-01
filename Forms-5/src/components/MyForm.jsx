@@ -1,0 +1,97 @@
+import { useState, useRef } from "react"
+
+
+const MyForm = () => {
+       //6- Controlled inputs
+    //O useState vinha anteriormente vazio '', trocamos e colocamos o valor do user, caso ele exista, para preencher os inputs com os dados do usuário. Assim, quando passamos o objeto user como prop, os inputs já aparecem preenchidos com as informações do usuário. Se não passarmos um objeto user, os inputs permanecerão vazios, permitindo que o usuário insira suas informações normalmente.
+
+    //-3 gerenciamento de dados - useState
+    const [name, setName] = useState(user ? user.name : '')
+    const [email, setEmail] = useState(user ? user.email : '')
+    const [bio, setBio] = useState('')
+    const [role, setRole] = useState('')
+
+    //10- Importamos o useRef e criamos a referencia abaixo que foi colocado no input para conseguimos utilizar o focus
+    const nameInputRef = useRef(null)
+
+    const handleName = (e) =>{
+        setName(e.target.value);
+    }
+
+    //5- Envio de formulário
+    // preventDefault ele evita o envio do formulário para outra página;
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        console.log('Enviando o formulário')
+        console.log(name, email, bio, role)
+
+        //7- Limpar os inputs após o envio
+        setName('')
+        setEmail('')
+        setBio('')
+        setRole('')
+        nameInputRef.current.focus()
+    }
+
+
+
+
+  return (
+    <div>
+           {/* 1- Criando o form */}
+           <form onSubmit={handleSubmit}>
+            <div>
+                <label htmlFor="name">Nome: </label>
+                <input
+                 type="text"
+                 name="name"
+                 ref={nameInputRef}
+                 placeholder="Digite seu Nome"
+                 onChange={handleName}
+                 value={name}
+                 autoFocus 
+                 />
+
+            </div>
+
+            {/* 2- Label envolvendo Input*/}
+           <label>
+            {/* 4- Simplificação da manipulação do state: na linha onChange*/}
+            <span>Email: </span>
+            <input
+             type="text"
+             name="email"
+             placeholder="Digite seu Email"
+             onChange={(e) => setEmail(e.target.value)}
+             value={email} />
+           </label>
+
+           {/* 8- TextArea*/}
+           <label>
+                <span>Bio: </span>
+                <textarea
+                    name="bio"
+                    placeholder='Descrição do Usuários:'
+                    onChange={(e) => setBio(e.target.value)}
+                    value={bio}
+                    ></textarea>
+           </label>
+
+           {/* 9- Select*/}
+           <label>
+                <span>Função do Sistema:</span>
+                <select name="role" required value={role} onChange={(e)=>setRole(e.target.value)}>
+                    <option value="" disabled hidden> Selecione uma opção</option>
+                    <option value="user">Usuários</option>
+                    <option value="editor">Editor</option>
+                    <option value="admin">Administrador</option>
+                </select>
+           </label>
+           <input type="submit" value="Enviar" />
+
+        </form>
+    </div>
+  )
+}
+
+export default MyForm

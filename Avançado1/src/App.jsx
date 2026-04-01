@@ -115,7 +115,7 @@ function App() {
 
       {/* State Lift: Um componente exibe outro altera, o Pai gerencia*/}
       <Message msg={message}/> {/* Componente que existe o valor do estado message*/}
-      <ChangeMessageState ChangeMessage={handleMessage}/> {/* Componente que altera o valor do estado*/}
+      <ChangeMessageState changeMessage={handleMessage}/> {/* Componente que altera o valor do estado*/}
       
 
         </div>
