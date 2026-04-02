@@ -1,0 +1,16 @@
+import './Nav.css'
+import { Link } from 'react-router-dom'
+
+const Nav = () => {
+  return (
+    <>
+      <nav className='cabecalho-nav'>
+        <Link to="/"><button>Home</button></Link>
+        <Link to="/About"><button>Sobre</button></Link>
+        <Link to="/Contato"><button>Contato</button></Link>
+      </nav>
+    </>
+  )
+}
+
+export default Nav
