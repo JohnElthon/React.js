@@ -1,7 +1,8 @@
+import './MyForm.css'
 import { useState, useRef } from "react"
 
 
-const MyForm = () => {
+const MyForm = ({user}) => {
        //6- Controlled inputs
     //O useState vinha anteriormente vazio '', trocamos e colocamos o valor do user, caso ele exista, para preencher os inputs com os dados do usuário. Assim, quando passamos o objeto user como prop, os inputs já aparecem preenchidos com as informações do usuário. Se não passarmos um objeto user, os inputs permanecerão vazios, permitindo que o usuário insira suas informações normalmente.
 
